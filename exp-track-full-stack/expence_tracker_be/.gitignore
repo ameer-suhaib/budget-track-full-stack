@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+
+# Virtual environment
+venv/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+media/
+staticfiles/
+local_settings.py

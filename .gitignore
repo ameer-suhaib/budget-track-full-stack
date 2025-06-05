@@ -1,0 +1,5 @@
+# Ignore Node modules and build files (frontend)
+/exp_track_FE/react_app/node_modules/
+
+/expence_tracker_be/venv
+/expence_tracker_be/__pycache__/
