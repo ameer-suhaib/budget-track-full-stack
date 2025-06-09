@@ -102,10 +102,23 @@ import os
 print(f"[DEBUG] ENV DATABASE_URL: {os.environ.get('DATABASE_URL')}")
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),  # fallback if not passed explicitly
+        default=os.environ.get('DATABASE_URL'),
         conn_max_age=600
     )
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'budget_track_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
