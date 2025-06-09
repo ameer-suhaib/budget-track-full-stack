@@ -61,8 +61,8 @@ class BudgetViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return MonthlyBudget.objects.filter(user = self.request.user)
     
-    def perform_create(self, serializers):
-        serializers.save(user = self.request.user )
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
