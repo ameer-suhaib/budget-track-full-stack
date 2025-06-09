@@ -214,7 +214,7 @@ const TransactionsPage = () => {
         <div key={tx.id} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
           <p><strong>Date:</strong> {tx.date}</p>
           <p><strong>Type:</strong> {tx.type}</p>
-          <strong>Category:</strong> {tx.category ? tx.category.name : 'N/A'}<br />
+          <p><strong>Category:</strong> {tx.category_name || 'N/A'}</p>
           <p><strong>Amount:</strong> ₹{tx.amount}</p>
           {tx.note && <p><strong>Note:</strong> {tx.note}</p>}
           <button onClick={() => handleEdit(tx)} style={{ marginLeft: '10px', color: 'green' ,width: 200}}>Edit</button>

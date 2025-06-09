@@ -17,6 +17,7 @@ const Sidebar = () => {
         <Link to="/dashboard">📊 Dashboard</Link>
         <Link to="/transactions">📄 Transactions</Link>
         <Link to="/add-category">🗂 Add Category</Link>
+        <Link to="/budgets">📆 Add Budget</Link>
         <br></br>
         <button className="logout-button" onClick={handleLogout}>
         🔓 Logout
