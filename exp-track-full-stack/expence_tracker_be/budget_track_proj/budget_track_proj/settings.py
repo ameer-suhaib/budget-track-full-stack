@@ -96,8 +96,13 @@ WSGI_APPLICATION = "budget_track_proj.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 import dj_database_url
+import os
+print(f"[DEBUG] ENV DATABASE_URL: {os.environ.get('DATABASE_URL')}")
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600)
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),  # fallback if not passed explicitly
+        conn_max_age=600
+    )
 }
 
 
