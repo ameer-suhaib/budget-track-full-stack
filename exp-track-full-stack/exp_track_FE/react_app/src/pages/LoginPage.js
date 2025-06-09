@@ -20,7 +20,7 @@ const LoginPage = ({ setIsLoggedIn }) => {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Login:</h2>
       <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
       <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
       <button onClick={handleLogin}>Login</button>
