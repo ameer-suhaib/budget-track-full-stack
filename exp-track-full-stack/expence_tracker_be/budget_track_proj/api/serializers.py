@@ -29,3 +29,4 @@ class MonthlyBudgetSerializer(serializers.ModelSerializer):
         month = data.get('month')
         if models.MonthlyBudget.objects.filter(user=user, month=month).exists():
             raise serializers.ValidationError("Budget for this month already exists.")
+        return data
